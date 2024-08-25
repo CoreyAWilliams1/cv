@@ -1,6 +1,6 @@
 ---
-title: Nick Strayer's Resume"
-author: Nick Strayer
+title: "Corey A. Williams' Resume"
+author: Corey A. Williams
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -15,8 +15,10 @@ knitr::opts_chunk$set(
   results='asis', 
   echo = FALSE
 )
-library(tidyverse)
-library(glue)
+library( pagedown )
+library( glue )
+library( tidyverse )
+library( pander )
 
 # Set this to true to have links turned into footnotes at the end of the document
 PDF_EXPORT <- FALSE
@@ -46,19 +48,18 @@ position_data <- read_csv('positions.csv') %>%
 Aside
 ================================================================================
 
-
+```{r, eval=F}
 ![logo](beta_dist.png){width=100%}
-
+'''
 Contact {#contact}
 --------------------------------------------------------------------------------
 
 
 
-- <i class="fa fa-envelope"></i> nick.strayer@gmail.com
-- <i class="fa fa-twitter"></i> NicholasStrayer
-- <i class="fa fa-github"></i> github.com/nstrayer
-- <i class="fa fa-link"></i> [nickstrayer.me](http://nickstrayer.me/)
-- <i class="fa fa-phone"></i> (734) 645-0110
+- <i class="fa fa-envelope"></i> cawill66@asu.edu.com
+- <i class="fa fa-github"></i> [github.com/CoreyAWilliams1](github.com/CoreyAWilliams1/)
+- <i class="fa fa-link"></i> [coreyawilliams1.github.io](https://coreyawilliams1.github.io/)
+- <i class="fab fa-linkedin"></i> Visit my [LinkedIn Profile](www.linkedin.com/in/corey-a-williams-3424a02b/)
 
 
 
@@ -66,61 +67,61 @@ Language Skills {#skills}
 --------------------------------------------------------------------------------
 
 
-```{r}
+```{r, eval = F}
 skills <- tribble(
   ~skill,               ~level,
-  "R",                  5,
-  "Javascript (d3.js)", 4.5,
-  "Python",             4,
-  "Bash",               3.5,
-  "SQL",                3,
-  "C++",                3,
-  "AWK",                3
+    "R",                  3,
+    "Markdown",           3,
+    "HTML",               1,
+    "CSS",                1,
+    "SQL",                1
 )
 build_skill_bars(skills)
 ```
 
 
 
-Open Source Contributions {#open-source}
+Skills {#more-info}
 --------------------------------------------------------------------------------
 
-All projects available at `github.com/nstrayer/<name>`
+**Data analytics:** RStudio, Excel, Visual Basic
+
+**Software and tools:** Microsoft Office Suite (Word, Excel, Powerpoint, Outlook, Teams), Slack, Google Drive, CRM Salesforce, Adobe PDF, Blackboard, Canvas, Zoom Video Conferencing and Phone, SAP EMS Inventory and Maintenance Management
+
+**Soft Skills:** Public Speaking/ Presentation, Team Collaboration, Event Planning and Coordination, Recruiting and Retention, Training and Evaluation, Scheduling,Account balancing, Account Reconciliation, and Cashiering, Touch Typing
 
 
-- `shinysense`: R package to use sensor data in Shiny apps
-- `tuftesque`: Hugo theme (behind LiveFreeOrDichotomize.com)
-- `slid3r`: D3 add-on for fully svg slider inputs
-
-
-More info {#more-info}
+Certification and Membership {#more-info}
 --------------------------------------------------------------------------------
 
-See full CV at nickstrayer.me/cv for more complete list of positions and publications.
+CPR/AED for Lifeguards, American Red Cross
 
+Heartsaver First Aid CPR AED, American Heart Association/ American Stroke Association
 
-Disclaimer {#disclaimer}
---------------------------------------------------------------------------------
+Anaphylaxis and Epinephrine Auto-Injector, American Red Cross
 
-Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
+Regular Tutoring Certificate Certified Tutor Level I and II, College Reading & Learning Association: International Tutor Program Certification**
 
-Source code: [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
+Member, Tutor Club, Cayuga Community College
 
-Last updated on `r Sys.Date()`.
+Member, Phi Theta Kappa Honor Society
 
+Securities Industry Essentials (SIE) Exam, Financial Industry Regulatory Authority (FINRA)
+
+General Securities Representative (Series 07) Exam, Financial Industry Regulatory Authority (FINRA)
+
+NY Life, Accident and Health Insurance Agent/Broker Exam (Series 17-55), New York State Department of Financial Services
 
 
 
 Main
 ================================================================================
 
-Nick Strayer {#title}
+Corey A. Williams {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "I have made [visualizations viewed by hundreds of thousands of people](https://www.nytimes.com/interactive/2016/08/26/us/college-student-migration.html), [sped up query times for 25 terabytes of data by an average of 4,800 times](https://livefreeordichotomize.com/2019/06/04/using_awk_and_r_to_parse_25tb/), and built [packages for R](https://github.com/nstrayer/shinysense) that let you [do magic](http://nickstrayer.me/dataDayTexas/).
-
-Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
+intro_text <- "I am a graduate student studying [Program Evaluation and Data Analytics](https://ds4ps.org/ms-prog-eval-data-analytics/) at Arizona State University. I am community service driven with a professional history of finance, and customer service, with established academics in both Mathematics and Economics.
 "
 
 
@@ -138,19 +139,18 @@ position_data %>% print_section('education')
 
 
 
-Selected Positions {data-icon=suitcase}
+Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
 position_data %>% print_section('positions')
 ```
 
-Selected Writing {data-icon=newspaper}
+Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
+Made w/ [**pagedown**](https://github.com/rstudio/pagedown). 
 
-```{r}
-position_data %>% print_section('writings')
-```
+Source code: [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
 
-
+Last updated on `r Sys.Date()`.
